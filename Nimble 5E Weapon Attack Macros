@@ -1,8 +1,16 @@
+NOTE: These formulas use global_attack_mod to store static modifiers.  You must have at least one mod selected or the macro breaks.  Create a Placeholder with a value of 0 to make sure macros work.
+
+NOTE:These formulas use global_damage_mods to store additional dice.  You don't have to keep any global dice mods checked.  Macros will work either way.
+---------------------------------------------
+
 Glaive
 ---------------------------------------------
+
+
 Glaive with GreatStrike
 ---------------------------------------------
 Glaive-GreatStrike AttackType
+?{Attack Type?|Standard,%{Selected|Glaive-Str-GreatStrike-Standard-Nested} |Advantage,%{Selected|Glaive-Str-GreatStrike-Advantage-Nested} |Disadvantage,%{Selected|Glaive-Str-GreatStrike-Disadvantage-Nested} |Double Advantage,%{Selected|Glaive-Str-GreatStrike-Advantage2-Nested} |Double Disadvantage,%{Selected|Glaive-Str-GreatStrike-Disadvantage2-Nested}}
 ---------------------------------------------
 Glaive-GreatStrike-Str-Standard-Nested
 &{template:default&#125; {{name=Great Strike - Glaive&#125;&#125; {{Desc=*@{Selected|character_name} makes a **Great Strike** glaive attack*&#125;&#125; [[ [[ [[1d10!cf<4cs>10kh1]][Weapon Dice] + [[1d10!cf<0cs>100]][Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str]]] [Bonus Damage] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon Dice=$[[0]] Slashing&#125;&#125; {{Great Strike=$[[1]] Slashing&#125;&#125; {{Global Dice Mods=$[[2]] varies&#125;&#125; {{Bonus Damage=$[[4]] Slashing&#125;&#125;  {{Global Static Mods=$[[5]] varies&#125;&#125; {{Dice Damage=$[[3]] ***Dice Damage*** &#125;&#125; {{Static Damage=$[[7]] ***Static Damage*** &#125;&#125; {{Total Damage=$[[8]] **Total Damage** &#125;&#125;
