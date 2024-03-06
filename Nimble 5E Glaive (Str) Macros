@@ -13,29 +13,35 @@ Glaive - Nested Macros (Only works as part of nested Macro; First Macro, AttackT
 ---------------------------------------------
 Glaive-AttackType
 ?{Attack Type?|Standard,%{Selected|Glaive-Str-Standard-Nested} |Advantage,%{Selected|Glaive-Str-Advantage-Nested} |Disadvantage,%{Selected|Glaive-Str-Disadvantage-Nested} |Double Advantage,%{Selected|Glaive-Str-Advantage2-Nested} |Double Disadvantage,%{Selected|Glaive-Str-Disadvantage2-Nested} |Triple Advantage,%{Selected|Glaive-Str-Advantage3-Nested} |Triple Disadvantage,%{Selected|Glaive-Str-Disadvantage3-Nested}}
+
 ---------------------------------------------
 Glaive-Str-Standard-Nested
 &{template:default&#125; {{name=Melee Attack - Glaive&#125;&#125; {{Description=*@{Selected|character_name} makes a glaive attack*&#125;&#125; [[ [[ [[1d10!cf<1cs>10 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str]]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] Slashing&#125;&#125; {{Dice Mods=$[[1]] varies&#125;&#125; {{Static=$[[3]] Slashing + $[[4]] Varies&#125;&#125; {{Dice Total=$[[2]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[6]] ***Static Damage*** &#125;&#125; {{Total=$[[7]] **Total Damage** &#125;&#125;
 
-&{template:default&#125; {{name=Great Strike - Glaive&#125;&#125; {{Description=*@{Selected|character_name} makes a **Great Strike** glaive attack*&#125;&#125; [[ [[ [[1d10!cf<4cs>10 [Weapon Dice]]] [Weapon Dice] + [[1d10!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods]]] + [[ [[@{Selected|Strength_mod} [Str]]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] + $[[1]] Slashing &#125;&#125; {{Dice Mods=$[[2]] Varies&#125;&#125; {{Static=$[[4]] Slashing + $[[5]] Varies&#125;&#125; {{Dice Total=$[[3]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125;
 ---------------------------------------------
 Glaive-Str-Advantage-Nested
 &{template:default&#125; {{name=Melee Attack - Glaive (Advantage)&#125;&#125; {{Description=*@{Selected|character_name} makes a glaive attack at **Advantage** *&#125;&#125; [[ [[ [[2d10!!cf<1cs>10kh1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str]]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] Slashing&#125;&#125; {{Dice Mods=$[[1]] varies&#125;&#125; {{Static=$[[3]] Slashing + $[[4]] Varies&#125;&#125; {{Dice Total=$[[2]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[6]] ***Static Damage*** &#125;&#125; {{Total=$[[7]] **Total Damage** &#125;&#125;
+
 ---------------------------------------------
 Glaive-Str-Disadvantage-Nested
 &{template:default&#125; {{name=Melee Attack - Glaive (Disadvantage)&#125;&#125; {{Description=*@{Selected|character_name} makes a glaive attack at **Disadvantage** *&#125;&#125; [[ [[ [[2d10!!cf<1cs>10kl1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str]]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] Slashing&#125;&#125; {{Dice Mods=$[[1]] varies&#125;&#125; {{Static=$[[3]] Slashing + $[[4]] Varies&#125;&#125; {{Dice Total=$[[2]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[6]] ***Static Damage*** &#125;&#125; {{Total=$[[7]] **Total Damage** &#125;&#125;
+
 ---------------------------------------------
 Glaive-Str-Advantage2-Nested
 &{template:default&#125; {{name=Melee Attack - Glaive (Advantage x2)&#125;&#125; {{Description=*@{Selected|character_name} makes a glaive attack at **Double Advantage** *&#125;&#125; [[ [[ [[3d10!!cf<1cs>10kh1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str]]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] Slashing&#125;&#125; {{Dice Mods=$[[1]] varies&#125;&#125; {{Static=$[[3]] Slashing + $[[4]] Varies&#125;&#125; {{Dice Total=$[[2]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[6]] ***Static Damage*** &#125;&#125; {{Total=$[[7]] **Total Damage** &#125;&#125;
+
 ---------------------------------------------
 Glaive-Str-Disadvantage2-Nested
 &{template:default&#125; {{name=Melee Attack - Glaive (Disadvantage x2)&#125;&#125; {{Description=*@{Selected|character_name} makes a glaive attack at **Double Disadvantage** *&#125;&#125; [[ [[ [[3d10!!cf<1cs>10kl1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str]]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] Slashing&#125;&#125; {{Dice Mods=$[[1]] varies&#125;&#125; {{Static=$[[3]] Slashing + $[[4]] Varies&#125;&#125; {{Dice Total=$[[2]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[6]] ***Static Damage*** &#125;&#125; {{Total=$[[7]] **Total Damage** &#125;&#125;
+
 ---------------------------------------------
 Glaive-Str-Advantage3-Nested
 &{template:default&#125; {{name=Melee Attack - Glaive (Advantage x3)&#125;&#125; {{Description=*@{Selected|character_name} makes a glaive attack at **Triple Advantage** *&#125;&#125; [[ [[ [[4d10!!cf<1cs>10kh1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str]]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] Slashing&#125;&#125; {{Dice Mods=$[[1]] varies&#125;&#125; {{Static=$[[3]] Slashing + $[[4]] Varies&#125;&#125; {{Dice Total=$[[2]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[6]] ***Static Damage*** &#125;&#125; {{Total=$[[7]] **Total Damage** &#125;&#125;
+
 ---------------------------------------------
 Glaive-Str-Disadvantage3-Nested
 &{template:default&#125; {{name=Melee Attack - Glaive (Disadvantage x3)&#125;&#125; {{Description=*@{Selected|character_name} makes a glaive attack at **Triple Disadvantage** *&#125;&#125; [[ [[ [[4d10!!cf<1cs>10kl1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str]]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] Slashing&#125;&#125; {{Dice Mods=$[[1]] varies&#125;&#125; {{Static=$[[3]] Slashing + $[[4]] Varies&#125;&#125; {{Dice Total=$[[2]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[6]] ***Static Damage*** &#125;&#125; {{Total=$[[7]] **Total Damage** &#125;&#125;
+
 ---------------------------------------------
 
 ---------------------------------------------
@@ -43,24 +49,31 @@ Glaive - Unnested Macros - Works on it's own, but not in a nested query
 ---------------------------------------------
 Glaive-Str-Standard
 &{template:default} {{name=Melee Attack - Glaive}} {{Description=*@{Selected|character_name} makes a glaive attack*}} [[ [[ [[1d10!cf<1cs>10 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str]]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] Slashing}} {{Dice Mods=$[[1]] varies}} {{Static=$[[3]] Slashing + $[[4]] Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[6]] ***Static Damage*** }} {{Total=$[[7]] **Total Damage** }}
+
 ---------------------------------------------
 Glaive-Str-Advantage
 &{template:default} {{name=Melee Attack - Glaive (Advantage)}} {{Description=*@{Selected|character_name} makes a glaive attack at **Advantage** *}} [[ [[ [[2d10!!cf<1cs>10kh1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str]]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] Slashing}} {{Dice Mods=$[[1]] varies}} {{Static=$[[3]] Slashing + $[[4]] Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[6]] ***Static Damage*** }} {{Total=$[[7]] **Total Damage** }}
+
 ---------------------------------------------
 Glaive-Str-Disadvantage
 &{template:default} {{name=Melee Attack - Glaive (Disadvantage)}} {{Description=*@{Selected|character_name} makes a glaive attack at **Disadvantage** *}} [[ [[ [[2d10!!cf<1cs>10kl1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str]]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] Slashing}} {{Dice Mods=$[[1]] varies}} {{Static=$[[3]] Slashing + $[[4]] Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[6]] ***Static Damage*** }} {{Total=$[[7]] **Total Damage** }}
+
 ---------------------------------------------
 Glaive-Str-Advantage2
 &{template:default} {{name=Melee Attack - Glaive (Advantage x2)}} {{Description=*@{Selected|character_name} makes a glaive attack at **Double Advantage** *}} [[ [[ [[3d10!!cf<1cs>10kh1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str]]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] Slashing}} {{Dice Mods=$[[1]] varies}} {{Static=$[[3]] Slashing + $[[4]] Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[6]] ***Static Damage*** }} {{Total=$[[7]] **Total Damage** }}
+
 ---------------------------------------------
 Glaive-Str-Disadvantage2
 &{template:default} {{name=Melee Attack - Glaive (Disadvantage x2)}} {{Description=*@{Selected|character_name} makes a glaive attack at **Double Disadvantage** *}} [[ [[ [[3d10!!cf<1cs>10kl1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str]]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] Slashing}} {{Dice Mods=$[[1]] varies}} {{Static=$[[3]] Slashing + $[[4]] Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[6]] ***Static Damage*** }} {{Total=$[[7]] **Total Damage** }}
+
 ---------------------------------------------
 Glaive-Str-Advantage3
 &{template:default} {{name=Melee Attack - Glaive (Advantage x3)}} {{Description=*@{Selected|character_name} makes a glaive attack at **Triple Advantage** *}} [[ [[ [[4d10!!cf<1cs>10kh1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str]]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] Slashing}} {{Dice Mods=$[[1]] varies}} {{Static=$[[3]] Slashing + $[[4]] Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[6]] ***Static Damage*** }} {{Total=$[[7]] **Total Damage** }}
+
 ---------------------------------------------
 Glaive-Str-Disadvantage3
 &{template:default} {{name=Melee Attack - Glaive (Disadvantage x3)}} {{Description=*@{Selected|character_name} makes a glaive attack at **Triple Disadvantage** *}} [[ [[ [[4d10!!cf<1cs>10kl1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str]]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] Slashing}} {{Dice Mods=$[[1]] varies}} {{Static=$[[3]] Slashing + $[[4]] Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[6]] ***Static Damage*** }} {{Total=$[[7]] **Total Damage** }}
+
 ---------------------------------------------
 
 ---------------------------------------------
@@ -68,47 +81,63 @@ Glaive with GreatStrike - Nested Macros (Only works as part of nested Macro; Fir
 ---------------------------------------------
 Glaive-GreatStrike AttackType
 ?{Attack Type?|Standard,%{Selected|Glaive-GreatStrike-Str-Standard-Nested} |Advantage,%{Selected|Glaive-GreatStrike-Str-Advantage-Nested} |Disadvantage,%{Selected|Glaive-GreatStrike-Str-Disadvantage-Nested} |Double Advantage,%{Selected|Glaive-GreatStrike-Str-Advantage2-Nested} |Double Disadvantage,%{Selected|Glaive-GreatStrike-Str-Disadvantage2-Nested} |Triple Advantage,%{Selected|Glaive-GreatStrike-Str-Advantage3-Nested} |Triple Disadvantage,%{Selected|Glaive-GreatStrike-Str-Disadvantage3-Nested}}
+
 ---------------------------------------------
 Glaive-GreatStrike-Str-Standard-Nested
 &{template:default&#125; {{name=Great Strike - Glaive&#125;&#125; {{Description=*@{Selected|character_name} makes a **Great Strike** glaive attack*&#125;&#125; [[ [[ [[1d10!cf<4cs>10 [Weapon Dice]]] [Weapon Dice] + [[1d10!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods]]] + [[ [[@{Selected|Strength_mod} [Str]]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] + $[[1]] Slashing &#125;&#125; {{Dice Mods=$[[2]] Varies&#125;&#125; {{Static=$[[4]] Slashing + $[[5]] Varies&#125;&#125; {{Dice Total=$[[3]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125;
+
 ---------------------------------------------
 Glaive-GreatStrike-Str-Advantage-Nested
 &{template:default&#125; {{name=Great Strike - Glaive (Advantage)&#125;&#125; {{Description=*@{Selected|character_name} makes a **Great Strike** glaive attack at **Advantage** *&#125;&#125; [[ [[ [[2d10!!cf<4cs>10kh1 [Weapon Dice]]] [Weapon Dice] + [[1d10!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str] ]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] + $[[1]] Slashing &#125;&#125;{{Dice Mods=$[[2]] Varies&#125;&#125; {{Static=$[[4]] Slashing + $[[5]] Varies&#125;&#125; {{Dice Total=$[[3]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125;
+
 ---------------------------------------------
 Glaive-GreatStrike-Str-Disadvantage-Nested
 &{template:default&#125; {{name=Great Strike - Glaive (Disadvantage)&#125;&#125; {{Description=*@{Selected|character_name} makes a **Great Strike** glaive attack at **Disadvantage** *&#125;&#125; [[ [[ [[2d10!!cf<4cs>10kl1 [Weapon Dice]]] [Weapon Dice] + [[1d10!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str] ]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] + $[[1]] Slashing &#125;&#125;{{Dice Mods=$[[2]] Varies&#125;&#125; {{Static=$[[4]] Slashing + $[[5]] Varies&#125;&#125; {{Dice Total=$[[3]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125;
+
 ---------------------------------------------
 Glaive-GreatStrike-Str-Advantage2-Nested
 &{template:default&#125; {{name=Great Strike - Glaive (Advantage x2)&#125;&#125; {{Description=*@{Selected|character_name} makes a **Great Strike** glaive attack at **Double Advantage** *&#125;&#125; [[ [[ [[3d10!!cf<4cs>10kh1 [Weapon Dice]]] [Weapon Dice] + [[1d10!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str] ]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] + $[[1]] Slashing &#125;&#125;{{Dice Mods=$[[2]] Varies&#125;&#125; {{Static=$[[4]] Slashing + $[[5]] Varies&#125;&#125; {{Dice Total=$[[3]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125;
+
 ---------------------------------------------
 Glaive-GreatStrike-Str-Disadvantage2-Nested
 &{template:default&#125; {{name=Great Strike - Glaive (Disadvantage x2)&#125;&#125; {{Description=*@{Selected|character_name} makes a **Great Strike** glaive attack at **Double Disadvantage** *&#125;&#125; [[ [[ [[3d10!!cf<4cs>10kl1 [Weapon Dice]]] [Weapon Dice] + [[1d10!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str] ]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] + $[[1]] Slashing &#125;&#125;{{Dice Mods=$[[2]] Varies&#125;&#125; {{Static=$[[4]] Slashing + $[[5]] Varies&#125;&#125; {{Dice Total=$[[3]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125;
+
 ---------------------------------------------
 Glaive-GreatStrike-Str-Advantage3-Nested
 &{template:default&#125; {{name=Great Strike - Glaive (Advantage x3)&#125;&#125; {{Description=*@{Selected|character_name} makes a **Great Strike** glaive attack at **Triple Advantage** *&#125;&#125; [[ [[ [[4d10!!cf<4cs>10kh1 [Weapon Dice]]] [Weapon Dice] + [[1d10!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str] ]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] + $[[1]] Slashing &#125;&#125;{{Dice Mods=$[[2]] Varies&#125;&#125; {{Static=$[[4]] Slashing + $[[5]] Varies&#125;&#125; {{Dice Total=$[[3]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125;
+
 ---------------------------------------------
 Glaive-GreatStrike-Str-Disadvantage3-Nested
 &{template:default&#125; {{name=Great Strike - Glaive (Disadvantage x3)&#125;&#125; {{Description=*@{Selected|character_name} makes a **Great Strike** glaive attack at **Triple Disadvantage** *&#125;&#125; [[ [[ [[4d10!!cf<4cs>10kl1 [Weapon Dice]]] [Weapon Dice] + [[1d10!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str] ]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] + $[[1]] Slashing &#125;&#125;{{Dice Mods=$[[2]] Varies&#125;&#125; {{Static=$[[4]] Slashing + $[[5]] Varies&#125;&#125; {{Dice Total=$[[3]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125;
+
 ---------------------------------------------
 Glaive with GreatStrike - Unnested Macros - Works on it's own, but not in a nested query
 ---------------------------------------------
 Glaive-GreatStrike-Str-Standard
 &{template:default} {{name=Great Strike - Glaive}} {{Description=*@{Selected|character_name} makes a **Great Strike** glaive attack*}} [[ [[ [[1d10!cf<4cs>10 [Weapon Dice]]] [Weapon Dice] + [[1d10!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str] ]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] + $[[1]] Slashing }}{{Dice Mods=$[[2]] Varies}} {{Static=$[[4]] Slashing + $[[5]] Varies}} {{Dice Total=$[[3]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }}
+
 ---------------------------------------------
 Glaive-GreatStrike-Str-Advantage
 &{template:default} {{name=Great Strike - Glaive (Advantage)}} {{Description=*@{Selected|character_name} makes a **Great Strike** glaive attack at **Advantage** *}} [[ [[ [[2d10!!cf<4cs>10kh1 [Weapon Dice]]] [Weapon Dice] + [[1d10!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str] ]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] + $[[1]] Slashing }}{{Dice Mods=$[[2]] Varies}} {{Static=$[[4]] Slashing + $[[5]] Varies}} {{Dice Total=$[[3]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }}
+
 ---------------------------------------------
 Glaive-GreatStrike-Str-Disadvantage
 &{template:default} {{name=Great Strike - Glaive (Disadvantage)}} {{Description=*@{Selected|character_name} makes a **Great Strike** glaive attack at **Disadvantage** *}} [[ [[ [[2d10!!cf<4cs>10kl1 [Weapon Dice]]] [Weapon Dice] + [[1d10!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str] ]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] + $[[1]] Slashing }}{{Dice Mods=$[[2]] Varies}} {{Static=$[[4]] Slashing + $[[5]] Varies}} {{Dice Total=$[[3]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }}
+
 ---------------------------------------------
 Glaive-GreatStrike-Str-Advantage2
 &{template:default} {{name=Great Strike - Glaive (Advantage x2)}} {{Description=*@{Selected|character_name} makes a **Great Strike** glaive attack at **Double Advantage** *}} [[ [[ [[3d10!!cf<4cs>10kh1 [Weapon Dice]]] [Weapon Dice] + [[1d10!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str] ]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] + $[[1]] Slashing }}{{Dice Mods=$[[2]] Varies}} {{Static=$[[4]] Slashing + $[[5]] Varies}} {{Dice Total=$[[3]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }}
+
 ---------------------------------------------
 Glaive-GreatStrike-Str-Disadvantage2
 &{template:default} {{name=Great Strike - Glaive (Disadvantage x2)}} {{Description=*@{Selected|character_name} makes a **Great Strike** glaive attack at **Double Disadvantage** *}} [[ [[ [[3d10!!cf<4cs>10kl1 [Weapon Dice]]] [Weapon Dice] + [[1d10!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str] ]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] + $[[1]] Slashing }}{{Dice Mods=$[[2]] Varies}} {{Static=$[[4]] Slashing + $[[5]] Varies}} {{Dice Total=$[[3]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }}
+
 ---------------------------------------------
 Glaive-GreatStrike-Str-Advantage3
 &{template:default} {{name=Great Strike - Glaive (Advantage x3)}} {{Description=*@{Selected|character_name} makes a **Great Strike** glaive attack at **Triple Advantage** *}} [[ [[ [[4d10!!cf<4cs>10kh1 [Weapon Dice]]] [Weapon Dice] + [[1d10!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str] ]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] + $[[1]] Slashing }}{{Dice Mods=$[[2]] Varies}} {{Static=$[[4]] Slashing + $[[5]] Varies}} {{Dice Total=$[[3]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }}
+
 ---------------------------------------------
 Glaive-GreatStrike-Str-Disadvantage3
 &{template:default} {{name=Great Strike - Glaive (Disadvantage x3)}} {{Description=*@{Selected|character_name} makes a **Great Strike** glaive attack at **Triple Disadvantage** *}} [[ [[ [[4d10!!cf<4cs>10kl1 [Weapon Dice]]] [Weapon Dice] + [[1d10!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] + [[ [[@{Selected|Strength_mod} [Str] ]] [Str] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] ]] {{Weapon=$[[0]] + $[[1]] Slashing }}{{Dice Mods=$[[2]] Varies}} {{Static=$[[4]] Slashing + $[[5]] Varies}} {{Dice Total=$[[3]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }}
+
+---------------------------------------------
