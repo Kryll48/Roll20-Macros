@@ -208,10 +208,6 @@ AgonizingBlast-MW-AttackType
 ---------------------------------------------
 AgonizingBlast-Cha-MW-Standard-Nested
 &{template:default&#125; {{name=Ranged Attack - Agonizing Eldritch Blast&#125;&#125; {{Description=*@{Selected|character_name} fires an Agonizing Eldritch Blast attack*&#125;&#125; {{Range=120'&#125;&#125; [[ [[ [[1d10!cf<1cs>10 [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|Charisma_mod} [Cha]]] [Cha] + [[1 [Magic Weapon]]] [Magic Weapon] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[0]] Force&#125;&#125; {{Dice Mods=$[[1]] Varies&#125;&#125; {{Static=$[[3]] + $[[4]] Force + $[[5]] Varies&#125;&#125; {{Dice Total=$[[2]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125;
-
-
-EldritchBlast-Cha-MW-Standard-Nested
-&{template:default&#125; {{name=Ranged Attack - Eldritch Blast&#125;&#125; {{Description=*@{Selected|character_name} fires an Eldritch Blast attack*&#125;&#125; {{Range=120'&#125;&#125; [[ [[ [[1d10!cf<1cs>10 [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[1 [Magic Weapon]]] [Magic Weapon] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[0]] Force&#125;&#125; {{Dice Mods=$[[1]] Varies&#125;&#125; {{Static=$[[3]] + $[[4]] Varies&#125;&#125; {{Dice Total=$[[2]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125;
 ---------------------------------------------
 AgonizingBlast-Cha-MW-Advantage-Nested
 &{template:default&#125; {{name=Ranged Attack - Agonizing Eldritch Blast (Advantage)&#125;&#125; {{Description=*@{Selected|character_name} fires an Agonizing Eldritch Blast attack at **Advantage** *&#125;&#125; {{Range=120'&#125;&#125; [[ [[ [[2d10!!cf<1cs>10kh1 [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|Charisma_mod} [Cha]]] [Cha] + [[1 [Magic Weapon]]] [Magic Weapon] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[0]] Force&#125;&#125; {{Dice Mods=$[[1]] Varies&#125;&#125; {{Static=$[[3]] + $[[4]] Force + $[[5]]Varies&#125;&#125; {{Dice Total=$[[2]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125;
@@ -233,7 +229,7 @@ AgonizingBlast-Cha-MW-Disadvantage3-Nested
 ---------------------------------------------
 
 ---------------------------------------------
-Eldritch Blast with Agonizing Blast - Unnested Macros - Works on it's own, but not in a nested query
+Eldritch Blast with Agonizing Blast with Magic Weapon - Unnested Macros - Works on it's own, but not in a nested query
 ---------------------------------------------
 AgonizingBlast-Cha-MW-Standard
 &{template:default} {{name=Ranged Attack - Agonizing Eldritch Blast}} {{Description=*@{Selected|character_name} fires an Agonizing Eldritch Blast attack*}} {{Range=120'}} [[ [[ [[1d10!cf<1cs>10 [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|Charisma_mod} [Cha]]] [Cha] + [[1 [Magic Weapon]]] [Magic Weapon] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[0]] Force}} {{Dice Mods=$[[1]] Varies}} {{Static=$[[3]] + $[[4]] Force + $[[5]]Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }}
@@ -256,4 +252,3 @@ AgonizingBlast-Cha-MW-Advantage3
 AgonizingBlast-Cha-MW-Disadvantage3
 &{template:default} {{name=Ranged Attack - Agonizing Eldritch Blast (Disadvantage x3)}} {{Description=*@{Selected|character_name} fires an Agonizing Eldritch Blast attack at **Triple Disadvantage** *}} {{Range=120'}} [[ [[ [[4d10!!cf<1cs>10kl1 [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|Charisma_mod} [Cha]]] [Cha] + [[1 [Magic Weapon]]] [Magic Weapon] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[0]] Force}} {{Dice Mods=$[[1]] Varies}} {{Static=$[[3]] + $[[4]] Force + $[[5]]Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }}
 ---------------------------------------------
-
