@@ -123,10 +123,19 @@ Longbow-Dex-MW-Disadvantage
 Longbow-Dex-MW-Advantage2
 &{template:default} {{name=Ranged Attack - Longbow (Advantage x2)}} {{Description=*@{Selected|character_name} fires an arrow at a target within range (150'/600') at **Double Advantage** *}} [[ [[ [[3d8!!cf<1cs>8kh1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|Dexterity_mod} [Dex]]] [Dex] + [[1 [Magic Weapon]]] [Magic Weapon] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Weapon=$[[0]] Slashing}} {{Dice Mods=$[[1]] varies}} {{Static=$[[3]] Slashing + $[[4]] Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }}
 ---------------------------------------------
-Longbow-Dex-MW-Disadvantage2
+Lonbow-Dex-MW-Disadvantage2
+
 ---------------------------------------------
-Longbow-Piercer-Dex-Disadvantage2
-&{template:default} {{name=Ranged Attack - Longbow (Disadvantage x2)}} {{Description=*@{Selected|character_name} fires an arrow at a target within range (150'/600') at **Double Disadvantage** *}} [[ [[ [[3d8!!cf<1cs>8kl1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|Dexterity_mod} [Dex]]] [Dex] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Weapon=$[[0]] Slashing}} {{Dice Mods=$[[1]] varies}} {{Static=$[[3]] Slashing + $[[4]] Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[6]] ***Static Damage*** }} {{Total=$[[7]] **Total Damage** }} {{Piercer Feat= On a critical, deal an additional [[1d8cf<0cs>5]]}}
+Lonbow-Dex-MW-Advantage3
+
+---------------------------------------------
+Lonbow-Dex-MW-Disadvantage3
+
+
+
+Problems
+Longbow-Dex-MW-Disadvantage2
+&{template:default} {{name=Ranged Attack - Longbow (Disadvantage x2)}} {{Description=*@{Selected|character_name} fires an arrow at a target within range (150'/600') at **Double Disadvantage** *}} [[ [[ [[3d8!!cf<1cs>8kl1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|Dexterity_mod} [Dex]]] [Dex] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Weapon=$[[0]] Slashing}} {{Dice Mods=$[[1]] varies}} {{Static=$[[3]] Slashing + $[[4]] Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[6]] ***Static Damage*** }} {{Total=$[[7]] **Total Damage** }}
 ---------------------------------------------
 Longbow-Piercer-Dex-Advantage3
 &{template:default} {{name=Ranged Attack - Longbow (Advantage x3)}} {{Description=*@{Selected|character_name} fires an arrow at a target within range (150'/600') at **Triple Advantage** *}} [[ [[ [[4d8!!cf<1cs>8kh1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|Dexterity_mod} [Dex]]] [Dex] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Weapon=$[[0]] Slashing}} {{Dice Mods=$[[1]] varies}} {{Static=$[[3]] Slashing + $[[4]] Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[6]] ***Static Damage*** }} {{Total=$[[7]] **Total Damage** }} {{Piercer Feat= On a critical, deal an additional [[1d8cf<0cs>5]]}}
