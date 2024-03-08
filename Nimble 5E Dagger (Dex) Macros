@@ -23,7 +23,7 @@ Dagger
 ---------------------------------------------
 Dagger - Nested Macros (Only works as part of nested Macro; First Macro, AttackType, contains the nesting query)
 ---------------------------------------------
-Dagger-AttackType
+Dagger-Dex-AttackType
 ?{Attack Type?|Standard,%{Selected|Dagger-Dex-Standard-Nested} |Advantage,%{Selected|Dagger-Dex-Advantage-Nested} |Disadvantage,%{Selected|Dagger-Dex-Disadvantage-Nested} |Double Advantage,%{Selected|Dagger-Dex-Advantage2-Nested} |Double Disadvantage,%{Selected|Dagger-Dex-Disadvantage2-Nested} |Triple Advantage,%{Selected|Dagger-Dex-Advantage3-Nested} |Triple Disadvantage,%{Selected|Dagger-Dex-Disadvantage3-Nested}}
 ---------------------------------------------
 Dagger-Dex-Standard-Nested
@@ -87,7 +87,7 @@ Dagger with Magic Weapon
 ---------------------------------------------
 Dagger with Magic Weapon - Nested Macros (Only works as part of nested Macro; First Macro, AttackType, contains the nesting query)
 ---------------------------------------------
-Dagger--MW-AttackType
+Dagger-Dex-MW-AttackType
 ?{Attack Type?|Standard,%{Selected|Dagger-Dex-MW-Standard-Nested} |Advantage,%{Selected|Dagger-Dex-MW-Advantage-Nested} |Disadvantage,%{Selected|Dagger-Dex-MW-Disadvantage-Nested} |Double Advantage,%{Selected|Dagger-Dex-MW-Advantage2-Nested} |Double Disadvantage,%{Selected|Dagger-Dex-MW-Disadvantage2-Nested} |Triple Advantage,%{Selected|Dagger-Dex-MW-Advantage3-Nested} |Triple Disadvantage,%{Selected|Dagger-Dex-MW-Disadvantage3-Nested}}
 ---------------------------------------------
 Dagger-Dex-MW-Standard-Nested
@@ -147,7 +147,7 @@ Dagger with Piercer Feat
 ---------------------------------------------
 Dagger with Piercer Feat - Nested Macros (Only works as part of nested Macro; First Macro, AttackType, contains the nesting query)
 ---------------------------------------------
-Dagger-Piercer-AttackType
+Dagger-Piercer-Dex-AttackType
 ?{Attack Type?|Standard,%{Selected|Dagger-Piercer-Dex-Standard-Nested} |Advantage,%{Selected|Dagger-Piercer-Dex-Advantage-Nested} |Disadvantage,%{Selected|Dagger-Piercer-Dex-Disadvantage-Nested} |Double Advantage,%{Selected|Dagger-Piercer-Dex-Advantage2-Nested} |Double Disadvantage,%{Selected|Dagger-Piercer-Dex-Disadvantage2-Nested} |Triple Advantage,%{Selected|Dagger-Piercer-Dex-Advantage3-Nested} |Triple Disadvantage,%{Selected|Dagger-Piercer-Dex-Disadvantage3-Nested}} 
 ---------------------------------------------
 Dagger-Piercer-Dex-Standard-Nested
@@ -211,7 +211,7 @@ Dagger with Magic Weapon and Piercer Feat
 ---------------------------------------------
 Dagger with Magic Weapon and Piercer Feat - Nested Macros (Only works as part of nested Macro; First Macro, AttackType, contains the nesting query)
 ---------------------------------------------
-Dagger-Piercer-MW-AttackType
+Dagger-Piercer-Dex-MW-AttackType
 ?{Attack Type?|Standard,%{Selected|Dagger-Piercer-Dex-MW-Standard-Nested} |Advantage,%{Selected|Dagger-Piercer-Dex-MW-Advantage-Nested} |Disadvantage,%{Selected|Dagger-Piercer-Dex-MW-Disadvantage-Nested} |Double Advantage,%{Selected|Dagger-Piercer-Dex-MW-Advantage2-Nested} |Double Disadvantage,%{Selected|Dagger-Piercer-Dex-MW-Disadvantage2-Nested} |Triple Advantage,%{Selected|Dagger-Piercer-Dex-MW-Advantage3-Nested} |Triple Disadvantage,%{Selected|Dagger-Piercer-Dex-MW-Disadvantage3-Nested}}
 ---------------------------------------------
 Dagger-Piercer-Dex-MW-Standard-Nested
@@ -239,7 +239,7 @@ Dagger-Piercer-Dex-MW-Disadvantage3-Nested
 ---------------------------------------------
 Dagger with Magic Weapon and Piercer Feat - Unnested Macros - Works on it's own, but not in a nested query
 ---------------------------------------------
-Dagger-Piercer-MW-Dex-MW-Standard
+Dagger-Piercer-Dex-MW-Standard
 &{template:default} {{name=Melee/Ranged Attack - Dagger}} {{Description=*@{Selected|character_name} makes a Dagger attack at a target within range (Melee/20'/60').*}} [[ [[ [[1d4!cf<1cs>4 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|Dexterity_mod} [Dex]]] [Dex] + [[1 [Magic Weapon]]] [Magic Weapon] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Weapon=$[[0]] Slashing}} {{Dice Mods=$[[1]] varies}} {{Static=$[[3]] Slashing + $[[4]] Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }} {{Piercer Feat= On a critical, deal an additional [[1d4cf<0cs>5]]}}
 ---------------------------------------------
 Dagger-Piercer-Dex-MW-Advantage
