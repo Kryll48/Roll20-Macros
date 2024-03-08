@@ -122,9 +122,8 @@ EldritchBlast-Cha-MW-Disadvantage3
 ---------------------------------------------
 
 
-
 ---------------------------------------------
-NEEDS WORK - Eldritch Blast with Agonizing Blast - Nested Macros (Only works as part of nested Macro; First Macro, AttackType, contains the nesting query)
+Eldritch Blast with Agonizing Blast - Nested Macros (Only works as part of nested Macro; First Macro, AttackType, contains the nesting query)
 ---------------------------------------------
 AgonizingBlast-AttackType
 ?{Attack Type?|Standard,%{Selected|AgonizingBlast-Cha-Standard-Nested} |Advantage,%{Selected|AgonizingBlast-Cha-Advantage-Nested} |Disadvantage,%{Selected|AgonizingBlast-Cha-Disadvantage-Nested} |Double Advantage,%{Selected|AgonizingBlast-Cha-Advantage2-Nested} |Double Disadvantage,%{Selected|AgonizingBlast-Cha-Disadvantage2-Nested} |Triple Advantage,%{Selected|AgonizingBlast-Cha-Advantage3-Nested} |Triple Disadvantage,%{Selected|AgonizingBlast-Cha-Disadvantage3-Nested}}
@@ -152,7 +151,7 @@ AgonizingBlast-Cha-Disadvantage3-Nested
 ---------------------------------------------
 
 ---------------------------------------------
-NEEDS WORK - Eldritch Blast with Agonizing Blast - Unnested Macros - Works on it's own, but not in a nested query
+Eldritch Blast with Agonizing Blast - Unnested Macros - Works on it's own, but not in a nested query
 ---------------------------------------------
 AgonizingBlast-Cha-Standard
 &{template:default} {{name=Ranged Attack - Agonizing Eldritch Blast}} {{Description=*@{Selected|character_name} fires an Agonizing Eldritch Blast attack*}} {{Range=120'}} [[ [[ [[1d10!cf<1cs>10 [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|Charisma_mod} [Cha]]] [Cha] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[0]] Force}} {{Dice Mods=$[[1]] Varies}} {{Static=$[[3]] Force + $[[4]] Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[6]] ***Static Damage*** }} {{Total=$[[7]] **Total Damage** }}
