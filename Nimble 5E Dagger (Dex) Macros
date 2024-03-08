@@ -73,10 +73,6 @@ Dagger-Dex-Disadvantage3
 &{template:default} {{name=Melee/Ranged Attack - Dagger (Disadvantage x3)}} {{Description=*@{Selected|character_name} makes a Dagger attack at a target within range (Melee/20'/60'). at **Triple Disadvantage** *}} [[ [[ [[4d4!!cf<1cs>4kl1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|Dexterity_mod} [Dex]]] [Dex] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Weapon=$[[0]] Slashing}} {{Dice Mods=$[[1]] varies}} {{Static=$[[3]] Slashing + $[[4]] Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[6]] ***Static Damage*** }} {{Total=$[[7]] **Total Damage** }}
 ---------------------------------------------
 
-Dagger-GreatStrike-Dex-Disadvantage3
-&{template:default} {{name=Great Strike - Dagger (Disadvantage x3)}} {{Description=*@{Selected|character_name} makes a **Great Strike** Dagger attack at **Triple Disadvantage** *}} [[ [[ [[4d4!!cf<4cs>10kl1 [Weapon Dice]]] [Weapon Dice] + [[1d4!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|Dexterity_mod} [Dex] ]] [Dex] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Weapon=$[[0]] + $[[1]] Slashing }}{{Dice Mods=$[[2]] Varies}} {{Static=$[[4]] Slashing + $[[5]] Varies}} {{Dice Total=$[[3]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }}
----------------------------------------------
-
 
 ---------------------------------------------
 ---------------------------------------------
@@ -196,7 +192,6 @@ Dagger-Piercer-Dex-Advantage3
 Dagger-Piercer-Dex-Disadvantage3
 &{template:default} {{name=Melee/Ranged Attack - Dagger (Disadvantage x3)}} {{Description=*@{Selected|character_name} makes a Dagger attack at a target within range (Melee/20'/60'). at **Triple Disadvantage** *}} [[ [[ [[4d4!!cf<1cs>4kl1 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|Dexterity_mod} [Dex]]] [Dex] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Weapon=$[[0]] Slashing}} {{Dice Mods=$[[1]] varies}} {{Static=$[[3]] Slashing + $[[4]] Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[6]] ***Static Damage*** }} {{Total=$[[7]] **Total Damage** }} {{Piercer Feat= On a critical, deal an additional [[1d4cf<0cs>5]]}}
 ---------------------------------------------
-
 Dagger-GreatStrike-Dex-Disadvantage3
 &{template:default} {{name=Great Strike - Dagger (Disadvantage x3)}} {{Description=*@{Selected|character_name} makes a **Great Strike** Dagger attack at **Triple Disadvantage** *}} [[ [[ [[4d4!!cf<4cs>10kl1 [Weapon Dice]]] [Weapon Dice] + [[1d4!cf<0cs>100 [Great Strike]]] [Great Strike] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|Dexterity_mod} [Dex] ]] [Dex] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Weapon=$[[0]] + $[[1]] Slashing }}{{Dice Mods=$[[2]] Varies}} {{Static=$[[4]] Slashing + $[[5]] Varies}} {{Dice Total=$[[3]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }} {{Piercer Feat= On a critical, deal an additional [[1d4cf<0cs>5]]}}
 ---------------------------------------------
