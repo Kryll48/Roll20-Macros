@@ -1,1 +1,35 @@
 A place to store Roll20 Macros, with a focus on macros for Nimble weapons
+
+Current Status
+  -Dagger (Dex) - Done
+  -Eldritch Blast (Cha) - Done
+  -Glaive (Str) - WIP
+  -Greatsword (Cha) - WIP  
+  -Greatsword (Str) - WIP
+  -Longbow (Dex) - WIP
+  -Shortbow (Dex) - Not Started
+  
+
+General Order for Weapons
+  -Off-hand Attack
+  -Weapon with GreatStrike/CalledShot (when appropriate)
+  -Weapon with Piercer (when appropriate)
+  -Off-hand with Piercer (when appropriate)
+  -Magic Weapon
+  -Magic Weapon Off-hand Attack
+  -Magic Weapon with GreatStrike/Called Shot
+  -Magic Weapon with Piercer
+  -Magic Weapon with Piercer and Offhand
+
+
+General Order for Spells
+  -Spell
+  -Spell with Agonizing Blast (Eldritch Blast only)
+
+
+Things that can be covered by Attack Mods (Used for Static Modifiers)
+  -Rage
+
+Things that can be covered by Damage Mods (Used for Dice Modifiers)
+  -Bless
+  -Sneak Attack
