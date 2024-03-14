@@ -2,25 +2,37 @@ A place to store Roll20 Macros, with a focus on macros for Nimble weapons
 
 Current Status
   -Dagger (Dex) - WIP
-  -Eldritch Blast (Cha) - Done
+  -Eldritch Blast (Cha) - WIP
   -Glaive (Str) - WIP
   -Greatsword (Cha) - WIP  
   -Greatsword (Str) - WIP
   -Longbow (Dex) - WIP
-  -Shortbow (Dex) - Not Started
+  -Shortbow (Dex) - WIP
   -Unarmed Strike (Dex) - WIP
   
 
 General Order for Weapons
-  -Off-hand Attack
-  -Weapon with GreatStrike/CalledShot (when appropriate)
-  -Weapon with Piercer (when appropriate)
-  -Off-hand with Piercer (when appropriate)
+  -Weapon Attack
+  -Weapon with Great Strike/Called Shot (when appropriate)
+  -Weapon with Crusher/Slasher/Piercer
+  -Weapon with Great Strike/Called Shot and Crusher/Slasher/Piercer
+  
   -Magic Weapon
-  -Magic Weapon Off-hand Attack
-  -Magic Weapon with GreatStrike/Called Shot
-  -Magic Weapon with Piercer
-  -Magic Weapon with Piercer and Offhand
+  -Magic Weapon with GreatStrike/Called Shot (when appropriate)
+  -Magic Weapon with Crusher/Slasher/Piercer
+  -Magic Weapon with Great Strike/Called Shot and Crusher/Slasher/Piercer
+  
+
+  -Offhand Attack
+  -Offhand with Called Shot (when appropriate)  
+  -Offhand with Crusher/Slasher/Piercer
+  -Offhand with Called Shot and Crusher/Slasher/Piercer
+  
+  -Offhand Magic Weapon
+  -Offhand Magic Weapon with Called Shot (when appropriate)
+  -Offhand Magic Weapon with Crusher/Slasher/Piercer
+  -Offhand Magic Weapon with Great Strike/Called Shot and Crusher/Slasher/Piercer
+  
 
 
 General Order for Spells
