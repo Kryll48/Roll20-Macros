@@ -1,14 +1,16 @@
 A place to store Roll20 Macros, with a focus on macros for Nimble weapons
 
 Current Status
-  -Dagger (Dex) - WIP
+  -Dagger (Dex) - Done (pending error checking)
   -Eldritch Blast (Cha) - WIP
   -Glaive (Str) - WIP
   -Greatsword (Cha) - WIP  
   -Greatsword (Str) - WIP
-  -Longbow (Dex) - WIP
+  -Handaxe (Str) - Done (pending error checking)
+  -Longbow (Dex) - Done (pending error checking)
   -Shortbow (Dex) - WIP
   -Unarmed Strike (Dex) - WIP
+  -Warhammer (Str) - Done (pending error checking)
   
 
 General Order for Weapons
