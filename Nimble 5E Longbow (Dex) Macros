@@ -349,7 +349,7 @@ Longbow-CalledShot-Dex-MW-Disadvantage3-Nested
 ---------------------------------------------
 
 ---------------------------------------------
-Longbow with Called Shot - Unnested Macros - Works on it's own, but not in a nested query
+Magic Longbow with Called Shot - Unnested Macros - Works on it's own, but not in a nested query
 ---------------------------------------------
 Longbow-CalledShot-Dex-MW-Standard
 &{template:default} {{name=Ranged Attack - Longbow}} {{Description=*@{Selected|character_name} fires an arrow at a target within range (150'/600').*}} [[ [[ [[1d8!cf<1cs>8 [Weapon Dice]]] [Weapon Dice] + [[1d8!cf<0cs>11 [Called Shot]]] [Called Shot] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|Dexterity_mod} [Dex]]] [Dex] + [[1 [Magic Weapon]]] [Magic Weapon] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Weapon=$[[0]] + $[[1]] Piercing}} {{Dice Mods=$[[2]] varies}} {{Static=$[[4]] + $[[5]] Piercing + $[[6]] Varies}} {{Dice Total=$[[3]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }}
@@ -376,7 +376,7 @@ Longbow-CalledShot-Dex-MW-Disadvantage3
 
 ---------------------------------------------
 ---------------------------------------------
-Longbow with Magic Weapon and Piercer Feat
+Magic Longbow and Piercer Feat
 ---------------------------------------------
 ---------------------------------------------
 
@@ -409,7 +409,7 @@ Longbow-Piercer-Dex-MW-Disadvantage3-Nested
 ---------------------------------------------
 
 ---------------------------------------------
-Longbow with Magic Weapon and Piercer Feat - Unnested Macros - Works on it's own, but not in a nested query
+Magic Longbow and Piercer Feat - Unnested Macros - Works on it's own, but not in a nested query
 ---------------------------------------------
 Longbow-Piercer-Dex-MW-Standard
 &{template:default} {{name=Ranged Attack - Longbow}} {{Description=*@{Selected|character_name} fires an arrow at a target within range (150'/600').*}} [[ [[ [[1d8!cf<1cs>8 [Weapon Dice]]] [Weapon Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|Dexterity_mod} [Dex]]] [Dex] + [[1 [Magic Weapon]]] [Magic Weapon] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Weapon=$[[0]] Piercing}} {{Dice Mods=$[[1]] varies}} {{Static=$[[3]] Piercing + $[[4]] Varies}} {{Dice Total=$[[2]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }} {{Piercer Feat= On a critical - deal an additional [[1d8cf<0cs>9]] Piercing damage}}
