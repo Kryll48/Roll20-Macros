@@ -1,4 +1,25 @@
-A place to store Roll20 Macros, with a focus on macros for Nimble weapons
+A place to store Roll20 Macros, with a focus on macros for weapons using the Nimble rules.
+
+
+NOTE: These Macros have been created with the intent of using with our local gaming group.  I'm sharing in case the baisc logic is helpful to others.  Many of these macros are still under development and review.  There may be errors in the macros related to die size, wording, totals, etc.  Please make sure to check carefully before using.
+
+
+Instructions:
+-To make these macros universal they use the "@{Selected|" logic frequently.  This means for the macro to work, you need to have a token selected.
+
+-To allow for tracking Static and Dice damage separately, these macros use the Global Attack Modifiers for Static modifiers (e.g. Rage) and the Global Damage Modifiers for dice modifiers (e.g. Bless, Sneak Attack).  You MUST have something checked in Global Attack Modifiers (Static modifiers) for the macros to work.  We have created Placeholder with a value of 0 for this purpose.
+
+-If you want to easily manage stacking advantage and disadvantage, use the Nested Macros.
+
+-For the Nested Macros: Place them in the Attributes and Abilities Tab under Abilities for the appropriate character (Standard 5E Character sheet on Roll20).  If you try to use them as global macros it will overwrite the HTML replacements in the macros (needed for nesting) when you go back to open them after the first time (Roll20 weirdness).
+
+-For the Nested Macros: You only need the AttackType Macro (e.g. Rapier-Dex-AttackType) to be checked to show in your Macro Bar or Token Actions for each weapon.  This will call all the other macros for that weapon (Standard, Advantage, Disadvantage, Double Advantage...).
+
+-For the Nested Macros: You can name the AttackType Macro anything you want (e.g. Rapier), but you must keep the related Nested Macro names as listed or fix them in your AttackType Macro (e.g. Rapier-Dex-Standard-Nested, Rapier-Dex-Advantage-Nested)
+
+-There are multiple combinations for most weapons (weapon, weapon with CalledShot/GreatStrike, weapon with Crusher/Slasher/Piercer, weapon with CalledShot/GreatStrike and Crusher/Slasher/Piercer; all previous with a Magic Weapon, All previous with offhand where appropriate.
+
+
 
 Current Status
   -Dagger (Dex) - Done (pending error checking)
@@ -7,12 +28,15 @@ Current Status
   -Greatsword (Cha) - Done (pending error checking)
   -Greatsword (Str) - Done (pending error checking)
   -Handaxe (Str) - Done (pending error checking)
+  -Heavy Crossbow (Dex) - Done (pending error checking)
   -Javelin (Str) - Done (pending error checking)
-  -Longbow (Dex) - WIP (Need to check MW formulas)
-  -Shortbow (Dex) - WIP (Need to check MW formulas)
+  -Light Crossbow (Dex) - Done (pending error checking)
+  -Longbow (Dex) - Done (pending error check)
+  -Rapier (Dex) - Done (pending error checking)
+  -Shortbow (Dex) - Done (pending error checking)
   -Unarmed Strike (Dex - Piercing) - Done (pending error checking)
   -Unarmed Strike (Dex - Bludgeoning) - Done (pending error checking)
-  -Warhammer (Str) - Done (pending error checking)
+  -Warhammer-1H (Str) - Done (pending error checking)
   
 
 General Order for Weapons
@@ -26,7 +50,6 @@ General Order for Weapons
   -Magic Weapon with Crusher/Slasher/Piercer
   -Magic Weapon with Great Strike/Called Shot and Crusher/Slasher/Piercer
   
-
   -Offhand Attack
   -Offhand with Called Shot (when appropriate)  
   -Offhand with Crusher/Slasher/Piercer
@@ -42,6 +65,7 @@ General Order for Weapons
 General Order for Spells
   -Spell
   -Spell with Agonizing Blast (Eldritch Blast only)
+  -Spell with Elemental Adept (where appropriate) - Note: Future Implementation 
 
 
 Things that can be covered by Attack Mods (Used for Static Modifiers)
