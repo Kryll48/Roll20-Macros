@@ -73,11 +73,6 @@ Water Whip-Disadvantage3
 &{template:default} {{name=Ranged Spell Attack - Water Whip (Disadvantage x3)}} {{Description=*@{Selected|Character_name} launches a Water Whip at **Triple Disadvantage** *}} {{Range=60'}} [[ [[ [[ [[4d6!!cf<1cs>10kl1 + [[1+floor((@{selected|level}+1)/6)-1]]d6cf<0cs>100]] [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[1]] Slashing}} {{Dice Mods=$[[3]] Varies}} {{Static=$[[5]] Varies}} {{Dice Total=$[[4]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }} {{On a hit=If the creature is Larger or smaller, you can force it to make a Strength saving throw, pulling it up to 10 feet towards the source of water on a failure.}}
 ---------------------------------------------
 
----------------------------------------------
-Water Whip-EA-Disadvantage3
-&{template:default} {{name=Ranged Spell Attack - Water Whip (Disadvantage)}} {{Description=*@{Selected|Character_name} launches an Elemental Adept Water Whip at **Disadvantage** *}} {{Range=60'}} [[ [[ [[ [[4d6!!cf<1cs>10kl1]] + [[{[[1+floor((@{selected|level}+1)/6)-1]]d6cf<0cs>100 + [[1+floor((@{selected|level}+1)/6)-1]]d2r<1cf<0cs>100}kh[[1+floor((@{selected|level}+1)/6)-1]]]] [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[0]] + $[[4]] Slashing}} {{Dice Mods=$[[6]] Varies}} {{Static=$[[8]] Varies}} {{Dice Total=$[[7]] ***Dice Damage*** }} {{Static Total=$[[10]] ***Static Damage*** }} {{Total=$[[11]] **Total Damage** }} {{On a hit=If the creature is Larger or smaller, you can force it to make a Strength saving throw, pulling it up to 10 feet towards the source of water on a failure.}}
----------------------------------------------
-
 
 ---------------------------------------------
 ---------------------------------------------
