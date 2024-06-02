@@ -1,0 +1,74 @@
+---------------------------------------------
+---------------------------------------------
+Healing Word
+---------------------------------------------
+---------------------------------------------
+NOTE: These formulas use global_attack_mod to store static modifiers.  
+    -You must have at least one mod selected or the macro breaks.  Create a Placeholder with a value of 0 to make sure macros work. 
+    -Placing a space after the damage will make the formula easier to view. For example, rage should look like "2 "
+
+NOTE:These formulas use global_damage_mods to store additional dice.  
+    -You don't have to keep any global dice mods checked.  Macros will work either way.
+    -Placing a space after the damage will make the formula easier to view.  
+    -To prevent red/green make sure to do a critical fail 1 less than dice minimum and critical success 1 higher than dice maximum.  For example, bless should look like what's in quotes "1d4cf<0cs>5 ".
+---------------------------------------------
+
+
+---------------------------------------------
+---------------------------------------------
+Healing Word
+---------------------------------------------
+---------------------------------------------
+
+---------------------------------------------
+Healing Word - Nested Macros (Only works as part of nested Macro; First Macro, AttackType, contains the nesting query)
+---------------------------------------------
+Healing Word-Level-Nested
+?{Attack Type?|Standard,%{Selected|Healing Word-Level-1-Nested} |Advantage,%{Selected|Healing Word-Level-2-Nested} |Disadvantage,%{Selected|Healing Word-Level-3-Nested} |Double Advantage,%{Selected|Healing Word-Level-4-Nested} |Double Disadvantage,%{Selected|Healing Word-Level-5-Nested} |Triple Advantage,%{Selected|Healing Word-Level-6-Nested} |Triple Disadvantage,%{Selected|Healing Word-Level-7-Nested}}
+---------------------------------------------
+Healing Word-Level-1-Nested
+&{template:default&#125; {{name=Heal - Healing Word&#125;&#125; {{Description=*@{Selected|Character_name} casts Healing Word*&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[ [[1d6!cf<1cs>10 + [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[1]] Healing&#125;&#125; {{Dice Mods=$[[3]] Varies&#125;&#125; {{Static=$[[5]] Varies&#125;&#125; {{Dice Total=$[[4]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125; 
+---------------------------------------------
+Healing Word-Level-2-Nested
+&{template:default&#125; {{name=Heal - Healing Word (Advantage)&#125;&#125; {{Description=*@{Selected|Character_name} casts Healing Word at **Advantage** *&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[ [[2d6!!cf<1cs>10 + [[1+floor((@{selected|level}+1)/6)-1]]d6cf<0cs>100]] [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[1]] Healing&#125;&#125; {{Dice Mods=$[[3]] Varies&#125;&#125; {{Static=$[[5]] Varies&#125;&#125; {{Dice Total=$[[4]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125; 
+---------------------------------------------
+Healing Word-Level-3-Nested
+&{template:default&#125; {{name=Heal - Healing Word (Disadvantage)&#125;&#125; {{Description=*@{Selected|Character_name} casts Healing Word at **Disadvantage** *&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[ [[2d6!!cf<1cs>10 + [[1+floor((@{selected|level}+1)/6)-1]]d6cf<0cs>100]] [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[1]] Healing&#125;&#125; {{Dice Mods=$[[3]] Varies&#125;&#125; {{Static=$[[5]] Varies&#125;&#125; {{Dice Total=$[[4]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125; 
+---------------------------------------------
+Healing Word-Level-4-Nested
+&{template:default&#125; {{name=Heal - Healing Word (Advantage x2)&#125;&#125; {{Description=*@{Selected|Character_name} casts Healing Word at **Double Advantage** *&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[ [[3d6!!cf<1cs>10 + [[1+floor((@{selected|level}+1)/6)-1]]d6cf<0cs>100]] [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[1]] Healing&#125;&#125; {{Dice Mods=$[[3]] Varies&#125;&#125; {{Static=$[[5]] Varies&#125;&#125; {{Dice Total=$[[4]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125; 
+---------------------------------------------
+Healing Word-Level-5-Nested
+&{template:default&#125; {{name=Heal - Healing Word (Disadvantage x2)&#125;&#125; {{Description=*@{Selected|Character_name} casts Healing Word at **Double Disadvantage** *&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[ [[3d6!!cf<1cs>10 + [[1+floor((@{selected|level}+1)/6)-1]]d6cf<0cs>100]] [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[1]] Healing&#125;&#125; {{Dice Mods=$[[3]] Varies&#125;&#125; {{Static=$[[5]] Varies&#125;&#125; {{Dice Total=$[[4]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125; 
+---------------------------------------------
+Healing Word-Level-6-Nested
+&{template:default&#125; {{name=Heal - Healing Word (Advantage x3)&#125;&#125; {{Description=*@{Selected|Character_name} casts Healing Word at **Triple Advantage** *&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[ [[4d6!!cf<1cs>10 + [[1+floor((@{selected|level}+1)/6)-1]]d6cf<0cs>100]] [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[1]] Healing&#125;&#125; {{Dice Mods=$[[3]] Varies&#125;&#125; {{Static=$[[5]] Varies&#125;&#125; {{Dice Total=$[[4]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125; 
+---------------------------------------------
+Healing Word-Level-7-Nested
+&{template:default&#125; {{name=Heal - Healing Word (Disadvantage x3)&#125;&#125; {{Description=*@{Selected|Character_name} casts Healing Word at **Triple Disadvantage** *&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[ [[4d6!!cf<1cs>10 + [[1+floor((@{selected|level}+1)/6)-1]]d6cf<0cs>100]] [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[1]] Healing&#125;&#125; {{Dice Mods=$[[3]] Varies&#125;&#125; {{Static=$[[5]] Varies&#125;&#125; {{Dice Total=$[[4]] ***Dice Damage*** &#125;&#125; {{Static Total=$[[7]] ***Static Damage*** &#125;&#125; {{Total=$[[8]] **Total Damage** &#125;&#125; 
+---------------------------------------------
+
+---------------------------------------------
+Healing Word - Unnested Macros - Works on it's own, but not in a nested query
+---------------------------------------------
+Healing Word-Level-1
+&{template:default} {{name=Heal - Healing Word}} {{Description=*@{Selected|Character_name} casts Healing Word*}} {{Range=Touch}} [[ [[ [[ [[1d6!cf<1cs>10 + [[1+floor((@{selected|level}+1)/6)-1]]d6cf<0cs>100]] [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[1]] Healing}} {{Dice Mods=$[[3]] Varies}} {{Static=$[[5]] Varies}} {{Dice Total=$[[4]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }} 
+---------------------------------------------
+Healing Word-Level-2
+&{template:default} {{name=Heal - Healing Word (Advantage)}} {{Description=*@{Selected|Character_name} casts Healing Word at **Advantage** *}} {{Range=Touch}} [[ [[ [[ [[2d6!!cf<1cs>10 + [[1+floor((@{selected|level}+1)/6)-1]]d6cf<0cs>100]] [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[1]] Healing}} {{Dice Mods=$[[3]] Varies}} {{Static=$[[5]] Varies}} {{Dice Total=$[[4]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }} 
+---------------------------------------------
+Healing Word-Level-3
+&{template:default} {{name=Heal - Healing Word (Disadvantage)}} {{Description=*@{Selected|Character_name} casts Healing Word at **Disadvantage** *}} {{Range=Touch}} [[ [[ [[ [[2d6!!cf<1cs>10 + [[1+floor((@{selected|level}+1)/6)-1]]d6cf<0cs>100]] [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[1]] Healing}} {{Dice Mods=$[[3]] Varies}} {{Static=$[[5]] Varies}} {{Dice Total=$[[4]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }} 
+---------------------------------------------
+Healing Word--Level-4
+&{template:default} {{name=Heal - Healing Word (Advantage x2)}} {{Description=*@{Selected|Character_name} casts Healing Word at **Double Advantage** *}} {{Range=Touch}} [[ [[ [[ [[3d6!!cf<1cs>10 + [[1+floor((@{selected|level}+1)/6)-1]]d6cf<0cs>100]] [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[1]] Healing}} {{Dice Mods=$[[3]] Varies}} {{Static=$[[5]] Varies}} {{Dice Total=$[[4]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }} 
+---------------------------------------------
+Healing Word--Level-5
+&{template:default} {{name=Heal - Healing Word (Disadvantage x2)}} {{Description=*@{Selected|Character_name} casts Healing Word at **Double Disadvantage** *}} {{Range=Touch}} [[ [[ [[ [[3d6!!cf<1cs>10 + [[1+floor((@{selected|level}+1)/6)-1]]d6cf<0cs>100]] [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[1]] Healing}} {{Dice Mods=$[[3]] Varies}} {{Static=$[[5]] Varies}} {{Dice Total=$[[4]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }} 
+---------------------------------------------
+Healing Word--Level-6
+&{template:default} {{name=Heal - Healing Word (Advantage x3)}} {{Description=*@{Selected|Character_name} casts Healing Word at **Triple Advantage** *}} {{Range=Touch}} [[ [[ [[ [[4d6!!cf<1cs>10 + [[1+floor((@{selected|level}+1)/6)-1]]d6cf<0cs>100]] [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[1]] Healing}} {{Dice Mods=$[[3]] Varies}} {{Static=$[[5]] Varies}} {{Dice Total=$[[4]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }} 
+---------------------------------------------
+Healing Word-Level-7
+&{template:default} {{name=Heal - Healing Word (Disadvantage x3)}} {{Description=*@{Selected|Character_name} casts Healing Word at **Triple Disadvantage** *}} {{Range=Touch}} [[ [[ [[ [[4d6!!cf<1cs>10 + [[1+floor((@{selected|level}+1)/6)-1]]d6cf<0cs>100]] [Spell Dice]]] [Spell Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Spell=$[[1]] Healing}} {{Dice Mods=$[[3]] Varies}} {{Static=$[[5]] Varies}} {{Dice Total=$[[4]] ***Dice Damage*** }} {{Static Total=$[[7]] ***Static Damage*** }} {{Total=$[[8]] **Total Damage** }} 
+---------------------------------------------
