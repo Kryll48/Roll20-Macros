@@ -1,0 +1,100 @@
+---------------------------------------------
+---------------------------------------------
+Battlefield Medicine
+---------------------------------------------
+---------------------------------------------
+NOTE: These formulas use global_attack_mod to store static modifiers.  
+    -You must have at least one mod selected or the macro breaks.  Create a Placeholder with a value of 0 to make sure macros work. 
+    -Placing a space after the damage will make the formula easier to view. For example, rage should look like "2 "
+
+NOTE:These formulas use global_damage_mods to store additional dice.  
+    -You don't have to keep any global dice mods checked.  Macros will work either way.
+    -Placing a space after the damage will make the formula easier to view.  
+    -To prevent red/green make sure to do a critical fail 1 less than dice minimum and critical success 1 higher than dice maximum.  For example, bless should look like what's in quotes "1d4cf<0cs>5 ".
+---------------------------------------------
+
+
+---------------------------------------------
+---------------------------------------------
+Battlefield Medicine
+---------------------------------------------
+---------------------------------------------
+
+---------------------------------------------
+Battlefield Medicine - Nested Macros (Only works as part of nested Macro; First Macro, AttackType, contains the nesting query)
+---------------------------------------------
+Battlefield-Medicine-Level-Nested
+?{Select Option?|End Effect,%{Selected|Battlefield-Medicine-End-Effect-Nested} |1 Dice,%{Selected|Battlefield-Medicine-1-Dice-Nested} |2 Dice,%{Selected|Battlefield-Medicine-2-Dice-Nested} |3 Dice,%{Selected|Battlefield-Medicine-3-Dice-Nested} |4 Dice,%{Selected|Battlefield-Medicine-4-Dice-Nested} |5 Dice,%{Selected|Battlefield-Medicine-5-Dice-Nested} |6 Dice,%{Selected|Battlefield-Medicine-6-Dice-Nested} |7 Dice,%{Selected|Battlefield-Medicine-7-Dice-Nested} |8 Dice,%{Selected|Battlefield-Medicine-8-Dice-Nested} |9 Dice,%{Selected|Battlefield-Medicine-9-Dice-Nested} |10 Dice,%{Selected|Battlefield-Medicine-10-Dice-Nested}}
+---------------------------------------------
+Battlefield-Medicine-End-Effect-Nested
+&{template:default&#125; {{name=Class Ability - Battlefield Medicine&#125;&#125; {{Description=*@{Selected|character_name} spends two battlefield healing dice to end one effect imposing the paralyzed or poisoned or stunned condition on the target.*&#125;&#125; {{Range=Touch&#125;&#125;
+---------------------------------------------
+Battlefield-Medicine-1-Dice-Nested
+&{template:default&#125; {{name=Class Ability - Battlefield Medicine&#125;&#125; {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 1 Dice.*&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[1d8!cf<1cs>8]] [[0d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing &#125;&#125; {{Dice Mods=$[[2]] &#125;&#125; {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods&#125;&#125; {{Dice Total=$[[3]] ***Dice Healing*** &#125;&#125; {{Static Total=$[[7]] ***Static Healing*** &#125;&#125; {{Total=$[[8]] **Total Healing** &#125;&#125;
+---------------------------------------------
+Battlefield-Medicine-2-Dice-Nested
+&{template:default&#125; {{name=Class Ability - Battlefield Medicine&#125;&#125; {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 2 Dice.*&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[1d8!cf<1cs>8]] + [[1d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing &#125;&#125; {{Dice Mods=$[[2]] &#125;&#125; {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods&#125;&#125; {{Dice Total=$[[3]] ***Dice Healing*** &#125;&#125; {{Static Total=$[[7]] ***Static Healing*** &#125;&#125; {{Total=$[[8]] **Total Healing** &#125;&#125;
+---------------------------------------------
+Battlefield-Medicine-3-Dice-Nested
+&{template:default&#125; {{name=Class Ability - Battlefield Medicine&#125;&#125; {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 3 Dice.*&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[1d8!cf<1cs>8]] + [[2d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing &#125;&#125; {{Dice Mods=$[[2]] &#125;&#125; {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods&#125;&#125; {{Dice Total=$[[3]] ***Dice Healing*** &#125;&#125; {{Static Total=$[[7]] ***Static Healing*** &#125;&#125; {{Total=$[[8]] **Total Healing** &#125;&#125;
+---------------------------------------------
+Battlefield-Medicine-4-Dice-Nested
+&{template:default&#125; {{name=Class Ability - Battlefield Medicine&#125;&#125; {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 4 Dice.*&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[1d8!cf<1cs>8]] + [[3d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing &#125;&#125; {{Dice Mods=$[[2]] &#125;&#125; {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods&#125;&#125; {{Dice Total=$[[3]] ***Dice Healing*** &#125;&#125; {{Static Total=$[[7]] ***Static Healing*** &#125;&#125; {{Total=$[[8]] **Total Healing** &#125;&#125;
+---------------------------------------------
+Battlefield-Medicine-5-Dice-Nested
+&{template:default&#125; {{name=Class Ability - Battlefield Medicine&#125;&#125; {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 5 Dice.*&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[1d8!cf<1cs>8]] + [[4d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing &#125;&#125; {{Dice Mods=$[[2]] &#125;&#125; {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods&#125;&#125; {{Dice Total=$[[3]] ***Dice Healing*** &#125;&#125; {{Static Total=$[[7]] ***Static Healing*** &#125;&#125; {{Total=$[[8]] **Total Healing** &#125;&#125;
+---------------------------------------------
+Battlefield-Medicine-6-Dice-Nested
+&{template:default&#125; {{name=Class Ability - Battlefield Medicine&#125;&#125; {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 6 Dice.*&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[1d8!cf<1cs>8]] + [[5d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing &#125;&#125; {{Dice Mods=$[[2]] &#125;&#125; {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods&#125;&#125; {{Dice Total=$[[3]] ***Dice Healing*** &#125;&#125; {{Static Total=$[[7]] ***Static Healing*** &#125;&#125; {{Total=$[[8]] **Total Healing** &#125;&#125;
+---------------------------------------------
+Battlefield-Medicine-7-Dice-Nested
+&{template:default&#125; {{name=Class Ability - Battlefield Medicine&#125;&#125; {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 7 Dice.*&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[1d8!cf<1cs>8]] + [[6d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing &#125;&#125; {{Dice Mods=$[[2]] &#125;&#125; {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods&#125;&#125; {{Dice Total=$[[3]] ***Dice Healing*** &#125;&#125; {{Static Total=$[[7]] ***Static Healing*** &#125;&#125; {{Total=$[[8]] **Total Healing** &#125;&#125;
+---------------------------------------------
+Battlefield-Medicine-8-Dice-Nested
+&{template:default&#125; {{name=Class Ability - Battlefield Medicine&#125;&#125; {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 8 Dice.*&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[1d8!cf<1cs>8]] + [[7d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing &#125;&#125; {{Dice Mods=$[[2]] &#125;&#125; {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods&#125;&#125; {{Dice Total=$[[3]] ***Dice Healing*** &#125;&#125; {{Static Total=$[[7]] ***Static Healing*** &#125;&#125; {{Total=$[[8]] **Total Healing** &#125;&#125;
+---------------------------------------------
+Battlefield-Medicine-9-Dice-Nested
+&{template:default&#125; {{name=Class Ability - Battlefield Medicine&#125;&#125; {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 9 Dice.*&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[1d8!cf<1cs>8]] + [[8d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing &#125;&#125; {{Dice Mods=$[[2]] &#125;&#125; {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods&#125;&#125; {{Dice Total=$[[3]] ***Dice Healing*** &#125;&#125; {{Static Total=$[[7]] ***Static Healing*** &#125;&#125; {{Total=$[[8]] **Total Healing** &#125;&#125;
+---------------------------------------------
+Battlefield-Medicine-10-Dice-Nested
+&{template:default&#125; {{name=Class Ability - Battlefield Medicine&#125;&#125; {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 10 Dice.*&#125;&#125; {{Range=Touch&#125;&#125; [[ [[ [[1d8!cf<1cs>8]] + [[9d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing &#125;&#125; {{Dice Mods=$[[2]] &#125;&#125; {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods&#125;&#125; {{Dice Total=$[[3]] ***Dice Healing*** &#125;&#125; {{Static Total=$[[7]] ***Static Healing*** &#125;&#125; {{Total=$[[8]] **Total Healing** &#125;&#125;
+---------------------------------------------
+
+
+---------------------------------------------
+Battlefield Medicine - Unnested Macros - Works on it's own, but not in a nested query
+---------------------------------------------
+Battlefield-Medicine-End-Effect
+&{template:default} {{name=Class Ability - Battlefield Medicine}} {{Description=*@{Selected|character_name} spends two battlefield healing dice to end one effect imposing the paralyzed, poisoned, or stunned condition on the target.*}} {{Range=Touch}}
+---------------------------------------------
+Battlefield-Medicine-1-Dice
+&{template:default} {{name=Class Ability - Battlefield Medicine}} {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 1 Dice.*}} {{Range=Touch}} [[ [[ [[1d8!cf<1cs>8]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing }} {{Dice Mods=$[[2]] }} {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods}} {{Dice Total=$[[3]] ***Dice Healing*** }} {{Static Total=$[[7]] ***Static Healing*** }} {{Total=$[[8]] **Total Healing** }}
+---------------------------------------------
+Battlefield-Medicine-2-Dice
+&{template:default} {{name=Class Ability - Battlefield Medicine}} {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 2 Dice.*}} {{Range=Touch}} [[ [[ [[1d8!cf<1cs>8]] + [[1d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing }} {{Dice Mods=$[[2]] }} {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods}} {{Dice Total=$[[3]] ***Dice Healing*** }} {{Static Total=$[[7]] ***Static Healing*** }} {{Total=$[[8]] **Total Healing** }}
+---------------------------------------------
+Battlefield-Medicine-3-Dice
+&{template:default} {{name=Class Ability - Battlefield Medicine}} {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 3 Dice.*}} {{Range=Touch}} [[ [[ [[1d8!cf<1cs>8]] + [[2d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing }} {{Dice Mods=$[[2]] }} {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods}} {{Dice Total=$[[3]] ***Dice Healing*** }} {{Static Total=$[[7]] ***Static Healing*** }} {{Total=$[[8]] **Total Healing** }}
+---------------------------------------------
+Battlefield-Medicine-4-Dice
+&{template:default} {{name=Class Ability - Battlefield Medicine}} {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 4 Dice.*}} {{Range=Touch}} [[ [[ [[1d8!cf<1cs>8]] + [[3d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing }} {{Dice Mods=$[[2]] }} {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods}} {{Dice Total=$[[3]] ***Dice Healing*** }} {{Static Total=$[[7]] ***Static Healing*** }} {{Total=$[[8]] **Total Healing** }}
+---------------------------------------------
+Battlefield-Medicine-5-Dice
+&{template:default} {{name=Class Ability - Battlefield Medicine}} {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 5 Dice.*}} {{Range=Touch}} [[ [[ [[1d8!cf<1cs>8]] + [[4d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing }} {{Dice Mods=$[[2]] }} {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods}} {{Dice Total=$[[3]] ***Dice Healing*** }} {{Static Total=$[[7]] ***Static Healing*** }} {{Total=$[[8]] **Total Healing** }}
+---------------------------------------------
+Battlefield-Medicine-6-Dice
+&{template:default} {{name=Class Ability - Battlefield Medicine}} {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 6 Dice.*}} {{Range=Touch}} [[ [[ [[1d8!cf<1cs>8]] + [[5d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing }} {{Dice Mods=$[[2]] }} {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods}} {{Dice Total=$[[3]] ***Dice Healing*** }} {{Static Total=$[[7]] ***Static Healing*** }} {{Total=$[[8]] **Total Healing** }}
+---------------------------------------------
+Battlefield-Medicine-7-Dice
+&{template:default} {{name=Class Ability - Battlefield Medicine}} {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 7 Dice.*}} {{Range=Touch}} [[ [[ [[1d8!cf<1cs>8]] + [[6d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing }} {{Dice Mods=$[[2]] }} {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods}} {{Dice Total=$[[3]] ***Dice Healing*** }} {{Static Total=$[[7]] ***Static Healing*** }} {{Total=$[[8]] **Total Healing** }}
+---------------------------------------------
+Battlefield-Medicine-8-Dice
+&{template:default} {{name=Class Ability - Battlefield Medicine}} {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 8 Dice.*}} {{Range=Touch}} [[ [[ [[1d8!cf<1cs>8]] + [[7d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing }} {{Dice Mods=$[[2]] }} {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods}} {{Dice Total=$[[3]] ***Dice Healing*** }} {{Static Total=$[[7]] ***Static Healing*** }} {{Total=$[[8]] **Total Healing** }}
+---------------------------------------------
+Battlefield-Medicine-9-Dice
+&{template:default} {{name=Class Ability - Battlefield Medicine}} {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 9 Dice.*}} {{Range=Touch}} [[ [[ [[1d8!cf<1cs>8]] + [[8d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing }} {{Dice Mods=$[[2]] }} {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods}} {{Dice Total=$[[3]] ***Dice Healing*** }} {{Static Total=$[[7]] ***Static Healing*** }} {{Total=$[[8]] **Total Healing** }}
+---------------------------------------------
+Battlefield-Medicine-10-Dice
+&{template:default} {{name=Class Ability - Battlefield Medicine}} {{Description=*@{Selected|character_name} uses battlefield medicine to heal for 10 Dice.*}} {{Range=Touch}} [[ [[ [[1d8!cf<1cs>8]] + [[9d8cf<0cs>100]] [Battlefield Medicine Dice] + [[@{Selected|global_damage_mod_roll}]] [Global Dice Mods] ]] [Total Dice] + [[ [[@{Selected|pb} [Proficiency Bonus]]] [Proficiency Bonus] + [[@{Selected|global_attack_mod}]] [Global Static Mods] ]] [Total Static] ]] {{Dice=$[[0]] + $[[1]] Healing }} {{Dice Mods=$[[2]] }} {{Static=$[[4]] Proficiency Bonus + $[[5]] Static Mods}} {{Dice Total=$[[3]] ***Dice Healing*** }} {{Static Total=$[[7]] ***Static Healing*** }} {{Total=$[[8]] **Total Healing** }}
+---------------------------------------------
+---------------------------------------------
