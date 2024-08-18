@@ -1,0 +1,7 @@
+---------------------------------------------
+---------------------------------------------
+Half-Orc
+---------------------------------------------
+---------------------------------------------
+Savage Attacks (d8) - Add to the end of an attack Macro
+{{Savage Attack Crit= On a critical hit deal an additional [[1d8cf<0cs>100]] damage&#125;&#125;
